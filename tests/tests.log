@@ -1,0 +1,2216 @@
+Tests started at 2026-07-16 08:37:59 UTC
+Branch: UKICLOENA-2397
+Pull Request ID: 8
+
+Static scan terraform_validate result: Success
+
+Static scan tflint result: Success
+
+Static scan trivy result: Success
+
+Plan result for 'basic': Success
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.api.aws_api_gateway_account.global_settings will be created
+  + resource "aws_api_gateway_account" "global_settings" {
+      + api_key_version     = (known after apply)
+      + cloudwatch_role_arn = (known after apply)
+      + features            = (known after apply)
+      + id                  = (known after apply)
+      + region              = "eu-west-2"
+      + throttle_settings   = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_client_certificate.this will be created
+  + resource "aws_api_gateway_client_certificate" "this" {
+      + arn                     = (known after apply)
+      + created_date            = (known after apply)
+      + description             = "example-client-cert"
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + pem_encoded_certificate = (known after apply)
+      + region                  = "eu-west-2"
+      + tags                    = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+    }
+
+  # module.api.aws_api_gateway_deployment.this will be created
+  + resource "aws_api_gateway_deployment" "this" {
+      + created_date = (known after apply)
+      + id           = (known after apply)
+      + region       = "eu-west-2"
+      + rest_api_id  = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_integration.this["my_app_path_1-get"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace        = (known after apply)
+      + connection_type        = "INTERNET"
+      + http_method            = "GET"
+      + id                     = (known after apply)
+      + passthrough_behavior   = (known after apply)
+      + region                 = "eu-west-2"
+      + resource_id            = (known after apply)
+      + response_transfer_mode = "BUFFERED"
+      + rest_api_id            = (known after apply)
+      + timeout_milliseconds   = 29000
+      + type                   = "MOCK"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_integration.this["my_app_path_1-post"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace        = (known after apply)
+      + connection_type        = "INTERNET"
+      + http_method            = "POST"
+      + id                     = (known after apply)
+      + passthrough_behavior   = (known after apply)
+      + region                 = "eu-west-2"
+      + resource_id            = (known after apply)
+      + response_transfer_mode = "BUFFERED"
+      + rest_api_id            = (known after apply)
+      + timeout_milliseconds   = 29000
+      + type                   = "MOCK"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_integration.this["my_app_path_2-get"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace        = (known after apply)
+      + connection_type        = "INTERNET"
+      + http_method            = "GET"
+      + id                     = (known after apply)
+      + passthrough_behavior   = (known after apply)
+      + region                 = "eu-west-2"
+      + resource_id            = (known after apply)
+      + response_transfer_mode = "BUFFERED"
+      + rest_api_id            = (known after apply)
+      + timeout_milliseconds   = 29000
+      + type                   = "MOCK"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_integration.this["my_app_path_2-post"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace        = (known after apply)
+      + connection_type        = "INTERNET"
+      + http_method            = "POST"
+      + id                     = (known after apply)
+      + passthrough_behavior   = (known after apply)
+      + region                 = "eu-west-2"
+      + resource_id            = (known after apply)
+      + response_transfer_mode = "BUFFERED"
+      + rest_api_id            = (known after apply)
+      + timeout_milliseconds   = 29000
+      + type                   = "MOCK"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_method.this["my_app_path_1-get"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "GET"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method.this["my_app_path_1-post"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "POST"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method.this["my_app_path_2-get"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "GET"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method.this["my_app_path_2-post"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "POST"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method_settings.this[0] will be created
+  + resource "aws_api_gateway_method_settings" "this" {
+      + id          = (known after apply)
+      + method_path = "*/*"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+      + stage_name  = "example-stage"
+
+      + settings {
+          + cache_data_encrypted                       = true
+          + cache_ttl_in_seconds                       = 300
+          + caching_enabled                            = true
+          + data_trace_enabled                         = false
+          + logging_level                              = "INFO"
+          + metrics_enabled                            = true
+          + require_authorization_for_cache_control    = true
+          + throttling_burst_limit                     = -1
+          + throttling_rate_limit                      = -1
+          + unauthorized_cache_control_header_strategy = "FAIL_WITH_403"
+        }
+    }
+
+  # module.api.aws_api_gateway_resource.this["my_app_path_1"] will be created
+  + resource "aws_api_gateway_resource" "this" {
+      + id          = (known after apply)
+      + parent_id   = (known after apply)
+      + path        = (known after apply)
+      + path_part   = "my_app_path_1"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_resource.this["my_app_path_2"] will be created
+  + resource "aws_api_gateway_resource" "this" {
+      + id          = (known after apply)
+      + parent_id   = (known after apply)
+      + path        = (known after apply)
+      + path_part   = "my_app_path_2"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_rest_api.this will be created
+  + resource "aws_api_gateway_rest_api" "this" {
+      + api_key_source               = (known after apply)
+      + arn                          = (known after apply)
+      + binary_media_types           = (known after apply)
+      + created_date                 = (known after apply)
+      + description                  = (known after apply)
+      + disable_execute_api_endpoint = true
+      + execution_arn                = (known after apply)
+      + id                           = (known after apply)
+      + minimum_compression_size     = (known after apply)
+      + name                         = "example-api"
+      + policy                       = (known after apply)
+      + region                       = "eu-west-2"
+      + root_resource_id             = (known after apply)
+      + security_policy              = (known after apply)
+      + tags                         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                     = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+
+      + endpoint_configuration {
+          + ip_address_type  = "dualstack"
+          + types            = [
+              + "PRIVATE",
+            ]
+          + vpc_endpoint_ids = [
+              + "vpce-070c8384f2397b727",
+            ]
+        }
+    }
+
+  # module.api.aws_api_gateway_rest_api_policy.this will be created
+  + resource "aws_api_gateway_rest_api_policy" "this" {
+      + id          = (known after apply)
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Effect    = "Allow"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Condition = {
+                          + StringNotEquals = {
+                              + "aws:SourceVpce" = "vpce-070c8384f2397b727"
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_stage.this will be created
+  + resource "aws_api_gateway_stage" "this" {
+      + arn                   = (known after apply)
+      + cache_cluster_enabled = false
+      + cache_cluster_size    = "0.5"
+      + client_certificate_id = (known after apply)
+      + deployment_id         = (known after apply)
+      + description           = "Example Stage"
+      + execution_arn         = (known after apply)
+      + id                    = (known after apply)
+      + invoke_url            = (known after apply)
+      + region                = "eu-west-2"
+      + rest_api_id           = (known after apply)
+      + stage_name            = "example-stage"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + web_acl_arn           = (known after apply)
+      + xray_tracing_enabled  = false
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_policy.default[0] will be created
+  + resource "aws_iam_policy" "default" {
+      + arn              = (known after apply)
+      + attachment_count = (known after apply)
+      + id               = (known after apply)
+      + name             = "BUPolicyFordefault"
+      + name_prefix      = (known after apply)
+      + path             = "/"
+      + policy           = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "logs:PutLogEvents",
+                          + "logs:GetLogEvents",
+                          + "logs:FilterLogEvents",
+                          + "logs:DescribeLogStreams",
+                          + "logs:DescribeLogGroups",
+                          + "logs:CreateLogStream",
+                          + "logs:CreateLogGroup",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id        = (known after apply)
+      + tags             = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role.default[0] will be created
+  + resource "aws_iam_role" "default" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "apigateway.amazonaws.com"
+                        }
+                      + Sid       = "AssumeRoleService"
+                    },
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Condition = {
+                          + Bool            = {
+                              + "aws:PrincipalIsAWSService" = "false"
+                            }
+                          + StringNotEquals = {
+                              + "aws:PrincipalOrgID" = [
+                                  + "o-33fd8d019b",
+                                  + "o-m6fjxrdr7x",
+                                  + "o-c7zjgfu8y0",
+                                  + "o-yfj05rswby",
+                                  + "o-m5tvfoa2j3",
+                                  + "o-v4zenr53b5",
+                                  + "o-r4orxccey7",
+                                  + "o-72fonqzrib",
+                                  + "o-rhlgy4h75h",
+                                  + "o-sg7wkai3ne",
+                                  + "o-mw9tjv7zmd",
+                                  + "o-8jhc22ry8c",
+                                  + "o-khqbuhx1kx",
+                                  + "o-mtyumpp7ml",
+                                ]
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = {
+                          + AWS = "*"
+                        }
+                      + Sid       = "DenyNonExperianAccountAccess"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Role for test-example-api-role"
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "test-example-api-role"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role_policy_attachment.default[0] will be created
+  + resource "aws_iam_role_policy_attachment" "default" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = "test-example-api-role"
+    }
+
+Plan: 20 to add, 0 to change, 0 to destroy.
+
+
+Wiz.io IaC scan result for 'basic': Success
+Report URL: https://app.wiz.io/findings/cicd-scans#~%2528cicd_scan~%2527006a5898-bf0b-86b0-81e2-59a1e8b58001%252A2c2026-07-16T08%2525%25252A3a39%2525%25252A3a38.118641269Z%2527%2529
+{
+  "__typename": "CICDDiskScanResult",
+  "osPackages": null,
+  "libraries": null,
+  "applications": null,
+  "endOfLifeTechnologies": null,
+  "cpes": null,
+  "secrets": null,
+  "dataFindings": null,
+  "vulnerableSBOMArtifactsByNameVersion": null,
+  "hostConfiguration": {
+    "hostConfigurationFrameworks": null,
+    "hostConfigurationFindings": null,
+    "analytics": {
+      "severity": {
+        "infoCount": 0,
+        "lowCount": 0,
+        "mediumCount": 0,
+        "highCount": 0,
+        "criticalCount": 0
+      },
+      "status": {
+        "passCount": 0,
+        "failCount": 0,
+        "errorCount": 0,
+        "notAssessedCount": 0,
+        "totalCount": 0
+      }
+    }
+  },
+  "failedPolicyMatches": null,
+  "analytics": {
+    "vulnerabilities": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "unfixedCount": 0,
+      "totalCount": 0
+    },
+    "secrets": {
+      "privateKeyCount": 0,
+      "publicKeyCount": 0,
+      "passwordCount": 0,
+      "certificateCount": 0,
+      "cloudKeyCount": 0,
+      "sshAuthorizedKeyCount": 0,
+      "dbConnectionStringCount": 0,
+      "gitCredentialCount": 0,
+      "presignedURLCount": 0,
+      "saasAPIKeyCount": 0,
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "hostConfiguration": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0
+    },
+    "malware": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "softwareSupplyChain": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiModel": null,
+    "sast": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiSast": null,
+    "filesScannedCount": 1,
+    "directoriesScannedCount": 1
+  },
+  "sbomOutput": "",
+  "malwares": null,
+  "softwareSupplyChain": null,
+  "aiModels": null,
+  "sast": null,
+  "iac": {
+    "__typename": "CICDIACScanResult",
+    "failedPolicyMatches": null,
+    "ruleMatches": null,
+    "scanStatistics": {
+      "infoMatches": 0,
+      "lowMatches": 0,
+      "mediumMatches": 0,
+      "highMatches": 0,
+      "criticalMatches": 0,
+      "totalMatches": 0,
+      "filesFound": 1,
+      "filesParsed": 1,
+      "queriesLoaded": 25,
+      "queriesExecuted": 25,
+      "queriesExecutionFailed": 0
+    },
+    "secrets": null,
+    "fileTypes": null,
+    "discoveredResources": null
+  },
+  "ruleMatches": null,
+  "scanStatistics": {
+    "infoMatches": 0,
+    "lowMatches": 0,
+    "mediumMatches": 0,
+    "highMatches": 0,
+    "criticalMatches": 0,
+    "totalMatches": 0,
+    "filesFound": 1,
+    "filesParsed": 1,
+    "queriesLoaded": 25,
+    "queriesExecuted": 25,
+    "queriesExecutionFailed": 0
+  },
+  "fileTypes": null,
+  "discoveredResources": null
+}
+
+Plan result for 'cloudwatch_custom': Success
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.api.aws_api_gateway_account.global_settings will be created
+  + resource "aws_api_gateway_account" "global_settings" {
+      + api_key_version     = (known after apply)
+      + cloudwatch_role_arn = (known after apply)
+      + features            = (known after apply)
+      + id                  = (known after apply)
+      + region              = "eu-west-2"
+      + throttle_settings   = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_client_certificate.this will be created
+  + resource "aws_api_gateway_client_certificate" "this" {
+      + arn                     = (known after apply)
+      + created_date            = (known after apply)
+      + description             = "example-cloudwatch-custom-client-cert"
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + pem_encoded_certificate = (known after apply)
+      + region                  = "eu-west-2"
+      + tags                    = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+    }
+
+  # module.api.aws_api_gateway_deployment.this will be created
+  + resource "aws_api_gateway_deployment" "this" {
+      + created_date = (known after apply)
+      + id           = (known after apply)
+      + region       = "eu-west-2"
+      + rest_api_id  = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_integration.this["test_path-get"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace        = (known after apply)
+      + connection_type        = "INTERNET"
+      + http_method            = "GET"
+      + id                     = (known after apply)
+      + passthrough_behavior   = (known after apply)
+      + region                 = "eu-west-2"
+      + resource_id            = (known after apply)
+      + response_transfer_mode = "BUFFERED"
+      + rest_api_id            = (known after apply)
+      + timeout_milliseconds   = 29000
+      + type                   = "MOCK"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_method.this["test_path-get"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "GET"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method_settings.this[0] will be created
+  + resource "aws_api_gateway_method_settings" "this" {
+      + id          = (known after apply)
+      + method_path = "*/*"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+      + stage_name  = "example-stage"
+
+      + settings {
+          + cache_data_encrypted                       = true
+          + cache_ttl_in_seconds                       = 300
+          + caching_enabled                            = true
+          + data_trace_enabled                         = false
+          + logging_level                              = "INFO"
+          + metrics_enabled                            = true
+          + require_authorization_for_cache_control    = true
+          + throttling_burst_limit                     = -1
+          + throttling_rate_limit                      = -1
+          + unauthorized_cache_control_header_strategy = "FAIL_WITH_403"
+        }
+    }
+
+  # module.api.aws_api_gateway_resource.this["test_path"] will be created
+  + resource "aws_api_gateway_resource" "this" {
+      + id          = (known after apply)
+      + parent_id   = (known after apply)
+      + path        = (known after apply)
+      + path_part   = "test_path"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_rest_api.this will be created
+  + resource "aws_api_gateway_rest_api" "this" {
+      + api_key_source               = (known after apply)
+      + arn                          = (known after apply)
+      + binary_media_types           = (known after apply)
+      + created_date                 = (known after apply)
+      + description                  = (known after apply)
+      + disable_execute_api_endpoint = true
+      + execution_arn                = (known after apply)
+      + id                           = (known after apply)
+      + minimum_compression_size     = (known after apply)
+      + name                         = "example-cloudwatch-custom-api"
+      + policy                       = (known after apply)
+      + region                       = "eu-west-2"
+      + root_resource_id             = (known after apply)
+      + security_policy              = (known after apply)
+      + tags                         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                     = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+
+      + endpoint_configuration {
+          + ip_address_type  = "dualstack"
+          + types            = [
+              + "PRIVATE",
+            ]
+          + vpc_endpoint_ids = [
+              + "vpce-070c8384f2397b727",
+            ]
+        }
+    }
+
+  # module.api.aws_api_gateway_rest_api_policy.this will be created
+  + resource "aws_api_gateway_rest_api_policy" "this" {
+      + id          = (known after apply)
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Effect    = "Allow"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Condition = {
+                          + StringNotEquals = {
+                              + "aws:SourceVpce" = "vpce-070c8384f2397b727"
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_stage.this will be created
+  + resource "aws_api_gateway_stage" "this" {
+      + arn                   = (known after apply)
+      + cache_cluster_enabled = false
+      + cache_cluster_size    = "0.5"
+      + client_certificate_id = (known after apply)
+      + deployment_id         = (known after apply)
+      + description           = "Example Stage with Custom CloudWatch Configuration"
+      + execution_arn         = (known after apply)
+      + id                    = (known after apply)
+      + invoke_url            = (known after apply)
+      + region                = "eu-west-2"
+      + rest_api_id           = (known after apply)
+      + stage_name            = "example-stage"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + web_acl_arn           = (known after apply)
+      + xray_tracing_enabled  = false
+    }
+
+  # module.api.aws_iam_role_policy.cloudwatch_inline[0] will be created
+  + resource "aws_iam_role_policy" "cloudwatch_inline" {
+      + id          = (known after apply)
+      + name        = "BUPolicyForCloudwatchDefault"
+      + name_prefix = (known after apply)
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "logs:PutLogEvents",
+                          + "logs:GetLogEvents",
+                          + "logs:FilterLogEvents",
+                          + "logs:DescribeLogStreams",
+                          + "logs:DescribeLogGroups",
+                          + "logs:CreateLogStream",
+                          + "logs:CreateLogGroup",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + role        = "test-custom-cloudwatch-role"
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role.default[0] will be created
+  + resource "aws_iam_role" "default" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "apigateway.amazonaws.com"
+                        }
+                      + Sid       = "AssumeRoleService"
+                    },
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Condition = {
+                          + Bool            = {
+                              + "aws:PrincipalIsAWSService" = "false"
+                            }
+                          + StringNotEquals = {
+                              + "aws:PrincipalOrgID" = [
+                                  + "o-33fd8d019b",
+                                  + "o-m6fjxrdr7x",
+                                  + "o-c7zjgfu8y0",
+                                  + "o-yfj05rswby",
+                                  + "o-m5tvfoa2j3",
+                                  + "o-v4zenr53b5",
+                                  + "o-r4orxccey7",
+                                  + "o-72fonqzrib",
+                                  + "o-rhlgy4h75h",
+                                  + "o-sg7wkai3ne",
+                                  + "o-mw9tjv7zmd",
+                                  + "o-8jhc22ry8c",
+                                  + "o-khqbuhx1kx",
+                                  + "o-mtyumpp7ml",
+                                ]
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = {
+                          + AWS = "*"
+                        }
+                      + Sid       = "DenyNonExperianAccountAccess"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Role for test-custom-cloudwatch-role"
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "test-custom-cloudwatch-role"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + permissions_boundary  = "arn:aws:iam::123456789012:policy/example-permissions-boundary"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+Plan: 12 to add, 0 to change, 0 to destroy.
+
+
+Wiz.io IaC scan result for 'cloudwatch_custom': Success
+Report URL: https://app.wiz.io/findings/cicd-scans#~%2528cicd_scan~%2527006a5898-f70b-8fed-8bc7-d7994f068001%252A2c2026-07-16T08%2525%25252A3a40%2525%25252A3a41.455250402Z%2527%2529
+{
+  "__typename": "CICDDiskScanResult",
+  "osPackages": null,
+  "libraries": null,
+  "applications": null,
+  "endOfLifeTechnologies": null,
+  "cpes": null,
+  "secrets": null,
+  "dataFindings": null,
+  "vulnerableSBOMArtifactsByNameVersion": null,
+  "hostConfiguration": {
+    "hostConfigurationFrameworks": null,
+    "hostConfigurationFindings": null,
+    "analytics": {
+      "severity": {
+        "infoCount": 0,
+        "lowCount": 0,
+        "mediumCount": 0,
+        "highCount": 0,
+        "criticalCount": 0
+      },
+      "status": {
+        "passCount": 0,
+        "failCount": 0,
+        "errorCount": 0,
+        "notAssessedCount": 0,
+        "totalCount": 0
+      }
+    }
+  },
+  "failedPolicyMatches": null,
+  "analytics": {
+    "vulnerabilities": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "unfixedCount": 0,
+      "totalCount": 0
+    },
+    "secrets": {
+      "privateKeyCount": 0,
+      "publicKeyCount": 0,
+      "passwordCount": 0,
+      "certificateCount": 0,
+      "cloudKeyCount": 0,
+      "sshAuthorizedKeyCount": 0,
+      "dbConnectionStringCount": 0,
+      "gitCredentialCount": 0,
+      "presignedURLCount": 0,
+      "saasAPIKeyCount": 0,
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "hostConfiguration": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0
+    },
+    "malware": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "softwareSupplyChain": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiModel": null,
+    "sast": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiSast": null,
+    "filesScannedCount": 1,
+    "directoriesScannedCount": 1
+  },
+  "sbomOutput": "",
+  "malwares": null,
+  "softwareSupplyChain": null,
+  "aiModels": null,
+  "sast": null,
+  "iac": {
+    "__typename": "CICDIACScanResult",
+    "failedPolicyMatches": null,
+    "ruleMatches": null,
+    "scanStatistics": {
+      "infoMatches": 0,
+      "lowMatches": 0,
+      "mediumMatches": 0,
+      "highMatches": 0,
+      "criticalMatches": 0,
+      "totalMatches": 0,
+      "filesFound": 1,
+      "filesParsed": 1,
+      "queriesLoaded": 25,
+      "queriesExecuted": 25,
+      "queriesExecutionFailed": 0
+    },
+    "secrets": null,
+    "fileTypes": null,
+    "discoveredResources": null
+  },
+  "ruleMatches": null,
+  "scanStatistics": {
+    "infoMatches": 0,
+    "lowMatches": 0,
+    "mediumMatches": 0,
+    "highMatches": 0,
+    "criticalMatches": 0,
+    "totalMatches": 0,
+    "filesFound": 1,
+    "filesParsed": 1,
+    "queriesLoaded": 25,
+    "queriesExecuted": 25,
+    "queriesExecutionFailed": 0
+  },
+  "fileTypes": null,
+  "discoveredResources": null
+}
+
+Plan result for 'open_api_spec': Success
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.api.aws_api_gateway_account.global_settings will be created
+  + resource "aws_api_gateway_account" "global_settings" {
+      + api_key_version     = (known after apply)
+      + cloudwatch_role_arn = (known after apply)
+      + features            = (known after apply)
+      + id                  = (known after apply)
+      + region              = "eu-west-2"
+      + throttle_settings   = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_client_certificate.this will be created
+  + resource "aws_api_gateway_client_certificate" "this" {
+      + arn                     = (known after apply)
+      + created_date            = (known after apply)
+      + description             = "example-client-cert"
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + pem_encoded_certificate = (known after apply)
+      + region                  = "eu-west-2"
+      + tags                    = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+    }
+
+  # module.api.aws_api_gateway_deployment.this will be created
+  + resource "aws_api_gateway_deployment" "this" {
+      + created_date = (known after apply)
+      + id           = (known after apply)
+      + region       = "eu-west-2"
+      + rest_api_id  = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_rest_api.this will be created
+  + resource "aws_api_gateway_rest_api" "this" {
+      + api_key_source               = (known after apply)
+      + arn                          = (known after apply)
+      + binary_media_types           = (known after apply)
+      + body                         = jsonencode(
+            {
+              + info    = {
+                  + title   = "example"
+                  + version = "1.0"
+                }
+              + openapi = "3.0.1"
+              + paths   = {
+                  + "/path1" = {
+                      + get = {
+                          + x-amazon-apigateway-integration = {
+                              + httpMethod           = "GET"
+                              + payloadFormatVersion = "1.0"
+                              + type                 = "MOCK"
+                            }
+                        }
+                    }
+                }
+            }
+        )
+      + created_date                 = (known after apply)
+      + description                  = (known after apply)
+      + disable_execute_api_endpoint = (known after apply)
+      + execution_arn                = (known after apply)
+      + id                           = (known after apply)
+      + minimum_compression_size     = (known after apply)
+      + name                         = "example-api"
+      + policy                       = (known after apply)
+      + region                       = "eu-west-2"
+      + root_resource_id             = (known after apply)
+      + security_policy              = (known after apply)
+      + tags                         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                     = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+
+      + endpoint_configuration {
+          + ip_address_type  = "dualstack"
+          + types            = [
+              + "PRIVATE",
+            ]
+          + vpc_endpoint_ids = [
+              + "vpce-0d74e16101c9ea098",
+            ]
+        }
+    }
+
+  # module.api.aws_api_gateway_rest_api_policy.this will be created
+  + resource "aws_api_gateway_rest_api_policy" "this" {
+      + id          = (known after apply)
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Effect    = "Allow"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Condition = {
+                          + StringNotEquals = {
+                              + "aws:SourceVpce" = "vpce-0d74e16101c9ea098"
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_stage.this will be created
+  + resource "aws_api_gateway_stage" "this" {
+      + arn                   = (known after apply)
+      + cache_cluster_enabled = false
+      + cache_cluster_size    = "0.5"
+      + client_certificate_id = (known after apply)
+      + deployment_id         = (known after apply)
+      + description           = "Example Stage"
+      + execution_arn         = (known after apply)
+      + id                    = (known after apply)
+      + invoke_url            = (known after apply)
+      + region                = "eu-west-2"
+      + rest_api_id           = (known after apply)
+      + stage_name            = "example-stage"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + web_acl_arn           = (known after apply)
+      + xray_tracing_enabled  = false
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_policy.default[0] will be created
+  + resource "aws_iam_policy" "default" {
+      + arn              = (known after apply)
+      + attachment_count = (known after apply)
+      + id               = (known after apply)
+      + name             = "BUPolicyFordefault"
+      + name_prefix      = (known after apply)
+      + path             = "/"
+      + policy           = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "logs:PutLogEvents",
+                          + "logs:GetLogEvents",
+                          + "logs:FilterLogEvents",
+                          + "logs:DescribeLogStreams",
+                          + "logs:DescribeLogGroups",
+                          + "logs:CreateLogStream",
+                          + "logs:CreateLogGroup",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id        = (known after apply)
+      + tags             = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role.default[0] will be created
+  + resource "aws_iam_role" "default" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "apigateway.amazonaws.com"
+                        }
+                      + Sid       = "AssumeRoleService"
+                    },
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Condition = {
+                          + Bool            = {
+                              + "aws:PrincipalIsAWSService" = "false"
+                            }
+                          + StringNotEquals = {
+                              + "aws:PrincipalOrgID" = [
+                                  + "o-33fd8d019b",
+                                  + "o-m6fjxrdr7x",
+                                  + "o-c7zjgfu8y0",
+                                  + "o-yfj05rswby",
+                                  + "o-m5tvfoa2j3",
+                                  + "o-v4zenr53b5",
+                                  + "o-r4orxccey7",
+                                  + "o-72fonqzrib",
+                                  + "o-rhlgy4h75h",
+                                  + "o-sg7wkai3ne",
+                                  + "o-mw9tjv7zmd",
+                                  + "o-8jhc22ry8c",
+                                  + "o-khqbuhx1kx",
+                                  + "o-mtyumpp7ml",
+                                ]
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = {
+                          + AWS = "*"
+                        }
+                      + Sid       = "DenyNonExperianAccountAccess"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Role for BURoleForAPIGatewayCloudwatchGlobal"
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "BURoleForAPIGatewayCloudwatchGlobal"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role_policy_attachment.default[0] will be created
+  + resource "aws_iam_role_policy_attachment" "default" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = "BURoleForAPIGatewayCloudwatchGlobal"
+    }
+
+Plan: 9 to add, 0 to change, 0 to destroy.
+
+
+Wiz.io IaC scan result for 'open_api_spec': Success
+Report URL: https://app.wiz.io/findings/cicd-scans#~%2528cicd_scan~%2527006a5899-360b-88eb-9feb-f309be778001%252A2c2026-07-16T08%2525%25252A3a41%2525%25252A3a36.30682785Z%2527%2529
+{
+  "__typename": "CICDDiskScanResult",
+  "osPackages": null,
+  "libraries": null,
+  "applications": null,
+  "endOfLifeTechnologies": null,
+  "cpes": null,
+  "secrets": null,
+  "dataFindings": null,
+  "vulnerableSBOMArtifactsByNameVersion": null,
+  "hostConfiguration": {
+    "hostConfigurationFrameworks": null,
+    "hostConfigurationFindings": null,
+    "analytics": {
+      "severity": {
+        "infoCount": 0,
+        "lowCount": 0,
+        "mediumCount": 0,
+        "highCount": 0,
+        "criticalCount": 0
+      },
+      "status": {
+        "passCount": 0,
+        "failCount": 0,
+        "errorCount": 0,
+        "notAssessedCount": 0,
+        "totalCount": 0
+      }
+    }
+  },
+  "failedPolicyMatches": null,
+  "analytics": {
+    "vulnerabilities": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "unfixedCount": 0,
+      "totalCount": 0
+    },
+    "secrets": {
+      "privateKeyCount": 0,
+      "publicKeyCount": 0,
+      "passwordCount": 0,
+      "certificateCount": 0,
+      "cloudKeyCount": 0,
+      "sshAuthorizedKeyCount": 0,
+      "dbConnectionStringCount": 0,
+      "gitCredentialCount": 0,
+      "presignedURLCount": 0,
+      "saasAPIKeyCount": 0,
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "hostConfiguration": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0
+    },
+    "malware": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "softwareSupplyChain": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiModel": null,
+    "sast": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiSast": null,
+    "filesScannedCount": 1,
+    "directoriesScannedCount": 1
+  },
+  "sbomOutput": "",
+  "malwares": null,
+  "softwareSupplyChain": null,
+  "aiModels": null,
+  "sast": null,
+  "iac": {
+    "__typename": "CICDIACScanResult",
+    "failedPolicyMatches": null,
+    "ruleMatches": null,
+    "scanStatistics": {
+      "infoMatches": 0,
+      "lowMatches": 0,
+      "mediumMatches": 0,
+      "highMatches": 0,
+      "criticalMatches": 0,
+      "totalMatches": 0,
+      "filesFound": 1,
+      "filesParsed": 1,
+      "queriesLoaded": 25,
+      "queriesExecuted": 25,
+      "queriesExecutionFailed": 0
+    },
+    "secrets": null,
+    "fileTypes": null,
+    "discoveredResources": null
+  },
+  "ruleMatches": null,
+  "scanStatistics": {
+    "infoMatches": 0,
+    "lowMatches": 0,
+    "mediumMatches": 0,
+    "highMatches": 0,
+    "criticalMatches": 0,
+    "totalMatches": 0,
+    "filesFound": 1,
+    "filesParsed": 1,
+    "queriesLoaded": 25,
+    "queriesExecuted": 25,
+    "queriesExecutionFailed": 0
+  },
+  "fileTypes": null,
+  "discoveredResources": null
+}
+
+Plan result for 'streaming': Success
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.api.aws_api_gateway_account.global_settings will be created
+  + resource "aws_api_gateway_account" "global_settings" {
+      + api_key_version     = (known after apply)
+      + cloudwatch_role_arn = (known after apply)
+      + features            = (known after apply)
+      + id                  = (known after apply)
+      + region              = "eu-west-2"
+      + throttle_settings   = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_client_certificate.this will be created
+  + resource "aws_api_gateway_client_certificate" "this" {
+      + arn                     = (known after apply)
+      + created_date            = (known after apply)
+      + description             = "example-streaming-client-cert"
+      + expiration_date         = (known after apply)
+      + id                      = (known after apply)
+      + pem_encoded_certificate = (known after apply)
+      + region                  = "eu-west-2"
+      + tags                    = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+    }
+
+  # module.api.aws_api_gateway_deployment.this will be created
+  + resource "aws_api_gateway_deployment" "this" {
+      + created_date = (known after apply)
+      + id           = (known after apply)
+      + region       = "eu-west-2"
+      + rest_api_id  = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_integration.this["stream_path-get"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace         = (known after apply)
+      + connection_type         = "INTERNET"
+      + http_method             = "GET"
+      + id                      = (known after apply)
+      + integration_http_method = "GET"
+      + passthrough_behavior    = (known after apply)
+      + region                  = "eu-west-2"
+      + resource_id             = (known after apply)
+      + response_transfer_mode  = "STREAM"
+      + rest_api_id             = (known after apply)
+      + timeout_milliseconds    = 29000
+      + type                    = "HTTP_PROXY"
+      + uri                     = "https://example.com/api"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_integration.this["stream_path-post"] will be created
+  + resource "aws_api_gateway_integration" "this" {
+      + cache_namespace         = (known after apply)
+      + connection_type         = "INTERNET"
+      + http_method             = "POST"
+      + id                      = (known after apply)
+      + integration_http_method = "POST"
+      + passthrough_behavior    = (known after apply)
+      + region                  = "eu-west-2"
+      + resource_id             = (known after apply)
+      + response_transfer_mode  = "STREAM"
+      + rest_api_id             = (known after apply)
+      + timeout_milliseconds    = 29000
+      + type                    = "HTTP_PROXY"
+      + uri                     = "https://example.com/api"
+
+      + tls_config {
+          + insecure_skip_verification = false
+        }
+    }
+
+  # module.api.aws_api_gateway_method.this["stream_path-get"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "GET"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method.this["stream_path-post"] will be created
+  + resource "aws_api_gateway_method" "this" {
+      + api_key_required = false
+      + authorization    = "NONE"
+      + http_method      = "POST"
+      + id               = (known after apply)
+      + region           = "eu-west-2"
+      + resource_id      = (known after apply)
+      + rest_api_id      = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_method_settings.this[0] will be created
+  + resource "aws_api_gateway_method_settings" "this" {
+      + id          = (known after apply)
+      + method_path = "*/*"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+      + stage_name  = "streaming-stage"
+
+      + settings {
+          + cache_data_encrypted                       = true
+          + cache_ttl_in_seconds                       = 300
+          + caching_enabled                            = true
+          + data_trace_enabled                         = false
+          + logging_level                              = "INFO"
+          + metrics_enabled                            = true
+          + require_authorization_for_cache_control    = true
+          + throttling_burst_limit                     = -1
+          + throttling_rate_limit                      = -1
+          + unauthorized_cache_control_header_strategy = "FAIL_WITH_403"
+        }
+    }
+
+  # module.api.aws_api_gateway_resource.this["stream_path"] will be created
+  + resource "aws_api_gateway_resource" "this" {
+      + id          = (known after apply)
+      + parent_id   = (known after apply)
+      + path        = (known after apply)
+      + path_part   = "stream_path"
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_rest_api.this will be created
+  + resource "aws_api_gateway_rest_api" "this" {
+      + api_key_source               = (known after apply)
+      + arn                          = (known after apply)
+      + binary_media_types           = (known after apply)
+      + created_date                 = (known after apply)
+      + description                  = (known after apply)
+      + disable_execute_api_endpoint = true
+      + execution_arn                = (known after apply)
+      + id                           = (known after apply)
+      + minimum_compression_size     = (known after apply)
+      + name                         = "example-streaming-api"
+      + policy                       = (known after apply)
+      + region                       = "eu-west-2"
+      + root_resource_id             = (known after apply)
+      + security_policy              = (known after apply)
+      + tags                         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all                     = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+
+      + endpoint_configuration {
+          + ip_address_type  = "dualstack"
+          + types            = [
+              + "PRIVATE",
+            ]
+          + vpc_endpoint_ids = [
+              + "vpce-070c8384f2397b727",
+            ]
+        }
+    }
+
+  # module.api.aws_api_gateway_rest_api_policy.this will be created
+  + resource "aws_api_gateway_rest_api_policy" "this" {
+      + id          = (known after apply)
+      + policy      = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Effect    = "Allow"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                  + {
+                      + Action    = "execute-api:Invoke"
+                      + Condition = {
+                          + StringNotEquals = {
+                              + "aws:SourceVpce" = "vpce-070c8384f2397b727"
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = "*"
+                      + Resource  = "arn:aws:execute-api:eu-west-2:077820194866:*/*/*/*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + region      = "eu-west-2"
+      + rest_api_id = (known after apply)
+    }
+
+  # module.api.aws_api_gateway_stage.this will be created
+  + resource "aws_api_gateway_stage" "this" {
+      + arn                   = (known after apply)
+      + cache_cluster_enabled = false
+      + cache_cluster_size    = "0.5"
+      + client_certificate_id = (known after apply)
+      + deployment_id         = (known after apply)
+      + description           = "Streaming Integration Stage"
+      + execution_arn         = (known after apply)
+      + id                    = (known after apply)
+      + invoke_url            = (known after apply)
+      + region                = "eu-west-2"
+      + rest_api_id           = (known after apply)
+      + stage_name            = "streaming-stage"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-api-gateway"
+          + "eitsce:moduleversion" = "local"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + web_acl_arn           = (known after apply)
+      + xray_tracing_enabled  = false
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_policy.default[0] will be created
+  + resource "aws_iam_policy" "default" {
+      + arn              = (known after apply)
+      + attachment_count = (known after apply)
+      + id               = (known after apply)
+      + name             = "BUPolicyFordefault"
+      + name_prefix      = (known after apply)
+      + path             = "/"
+      + policy           = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action   = [
+                          + "logs:PutLogEvents",
+                          + "logs:GetLogEvents",
+                          + "logs:FilterLogEvents",
+                          + "logs:DescribeLogStreams",
+                          + "logs:DescribeLogGroups",
+                          + "logs:CreateLogStream",
+                          + "logs:CreateLogGroup",
+                        ]
+                      + Effect   = "Allow"
+                      + Resource = "*"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + policy_id        = (known after apply)
+      + tags             = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all         = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role.default[0] will be created
+  + resource "aws_iam_role" "default" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "apigateway.amazonaws.com"
+                        }
+                      + Sid       = "AssumeRoleService"
+                    },
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Condition = {
+                          + Bool            = {
+                              + "aws:PrincipalIsAWSService" = "false"
+                            }
+                          + StringNotEquals = {
+                              + "aws:PrincipalOrgID" = [
+                                  + "o-33fd8d019b",
+                                  + "o-m6fjxrdr7x",
+                                  + "o-c7zjgfu8y0",
+                                  + "o-yfj05rswby",
+                                  + "o-m5tvfoa2j3",
+                                  + "o-v4zenr53b5",
+                                  + "o-r4orxccey7",
+                                  + "o-72fonqzrib",
+                                  + "o-rhlgy4h75h",
+                                  + "o-sg7wkai3ne",
+                                  + "o-mw9tjv7zmd",
+                                  + "o-8jhc22ry8c",
+                                  + "o-khqbuhx1kx",
+                                  + "o-mtyumpp7ml",
+                                ]
+                            }
+                        }
+                      + Effect    = "Deny"
+                      + Principal = {
+                          + AWS = "*"
+                        }
+                      + Sid       = "DenyNonExperianAccountAccess"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Role for test-streaming-api-role"
+      + force_detach_policies = false
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = "test-streaming-api-role"
+      + name_prefix           = (known after apply)
+      + path                  = "/"
+      + tags                  = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + tags_all              = {
+          + "AppID"                = "23117"
+          + "BusinessUnit"         = "EITS"
+          + "CostString"           = "2000.GB.139.606005"
+          + "CreatedWith"          = "Terraform"
+          + "DeployedByAURA"       = "true"
+          + "Environment"          = "sbx"
+          + "ResourceOwner"        = "eitsukicloud@experian.com"
+          + "eitsce:modulename"    = "eits-tf-aws-iam"
+          + "eitsce:moduleversion" = "1.9.7"
+          + "eitsce:tagschecked"   = "true"
+        }
+      + unique_id             = (known after apply)
+
+      + inline_policy (known after apply)
+    }
+
+  # module.api.module.cloudwatch_role[0].aws_iam_role_policy_attachment.default[0] will be created
+  + resource "aws_iam_role_policy_attachment" "default" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = "test-streaming-api-role"
+    }
+
+Plan: 15 to add, 0 to change, 0 to destroy.
+
+
+Wiz.io IaC scan result for 'streaming': Success
+Report URL: https://app.wiz.io/findings/cicd-scans#~%2528cicd_scan~%2527006a5899-6d0b-8f87-987a-aebdce858001%252A2c2026-07-16T08%2525%25252A3a42%2525%25252A3a31.250618335Z%2527%2529
+{
+  "__typename": "CICDDiskScanResult",
+  "osPackages": null,
+  "libraries": null,
+  "applications": null,
+  "endOfLifeTechnologies": null,
+  "cpes": null,
+  "secrets": null,
+  "dataFindings": null,
+  "vulnerableSBOMArtifactsByNameVersion": null,
+  "hostConfiguration": {
+    "hostConfigurationFrameworks": null,
+    "hostConfigurationFindings": null,
+    "analytics": {
+      "severity": {
+        "infoCount": 0,
+        "lowCount": 0,
+        "mediumCount": 0,
+        "highCount": 0,
+        "criticalCount": 0
+      },
+      "status": {
+        "passCount": 0,
+        "failCount": 0,
+        "errorCount": 0,
+        "notAssessedCount": 0,
+        "totalCount": 0
+      }
+    }
+  },
+  "failedPolicyMatches": null,
+  "analytics": {
+    "vulnerabilities": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "unfixedCount": 0,
+      "totalCount": 0
+    },
+    "secrets": {
+      "privateKeyCount": 0,
+      "publicKeyCount": 0,
+      "passwordCount": 0,
+      "certificateCount": 0,
+      "cloudKeyCount": 0,
+      "sshAuthorizedKeyCount": 0,
+      "dbConnectionStringCount": 0,
+      "gitCredentialCount": 0,
+      "presignedURLCount": 0,
+      "saasAPIKeyCount": 0,
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "hostConfiguration": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0
+    },
+    "malware": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "softwareSupplyChain": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiModel": null,
+    "sast": {
+      "infoCount": 0,
+      "lowCount": 0,
+      "mediumCount": 0,
+      "highCount": 0,
+      "criticalCount": 0,
+      "totalCount": 0
+    },
+    "aiSast": null,
+    "filesScannedCount": 1,
+    "directoriesScannedCount": 1
+  },
+  "sbomOutput": "",
+  "malwares": null,
+  "softwareSupplyChain": null,
+  "aiModels": null,
+  "sast": null,
+  "iac": {
+    "__typename": "CICDIACScanResult",
+    "failedPolicyMatches": null,
+    "ruleMatches": null,
+    "scanStatistics": {
+      "infoMatches": 0,
+      "lowMatches": 0,
+      "mediumMatches": 0,
+      "highMatches": 0,
+      "criticalMatches": 0,
+      "totalMatches": 0,
+      "filesFound": 1,
+      "filesParsed": 1,
+      "queriesLoaded": 25,
+      "queriesExecuted": 25,
+      "queriesExecutionFailed": 0
+    },
+    "secrets": null,
+    "fileTypes": null,
+    "discoveredResources": null
+  },
+  "ruleMatches": null,
+  "scanStatistics": {
+    "infoMatches": 0,
+    "lowMatches": 0,
+    "mediumMatches": 0,
+    "highMatches": 0,
+    "criticalMatches": 0,
+    "totalMatches": 0,
+    "filesFound": 1,
+    "filesParsed": 1,
+    "queriesLoaded": 25,
+    "queriesExecuted": 25,
+    "queriesExecutionFailed": 0
+  },
+  "fileTypes": null,
+  "discoveredResources": null
+}
